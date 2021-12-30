@@ -2,6 +2,7 @@
 
 *{margin:0; padding:0;}
 html{height:100%;}
+body{overflow-y: hidden;}
 body::-webkit-scrollbar {display:none;}
 ul,li,ol {list-style: none;}
 a{text-decoration: none; color:#666;}
