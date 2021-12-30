@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+*{margin:0; padding:0;}
+html{height:100%;}
+body::-webkit-scrollbar {display:none;}
+ul,li,ol {list-style: none;}
+a{text-decoration: none; color:#666;}
+
+#menu {width:80px; height:250px;  position:fixed; 
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    top:50%; right:0px; transform:translatey(-50%); z-index:100;}
+
+#menu>ul {width:40px; height:220px;}
+
+#menu li {width:20px; height:20px; position:relative;
+    display:block; margin:10px auto; border-radius:50%;
+    background-color: lightgray; transition:all 0.5s ease; }
+
+#menu li a {transition:all 0.3s ease-in-out;
+    top:0; left:0; width:100%; height:100%; outline:none; border-radius:50%;
+    cursor:pointer; position:absolute;}
+
+#menu li:hover {opacity: 0.5;}    
+
+header {position: relative;}
+#logo {display: none;
+    width:600px; height:180px; 
+    position:absolute; top:260px; left:450px;
+    opacity: 0.5;
+    background-color: lightslategray; z-index: 200;}
+
+
+
+#contents>div{height:100vh;}
+
+#section1{background-color:#fdfcfa;}
+#section1 img{width:100%; height:100%;}
+
+#section2{background-color:lightcoral;}
+
+#section3{background-color:lightgoldenrodyellow;}
+
+#section4{background-color:lightgray;}
+
+#section5{background-color:lightsalmon;}
+
+#section6{background-color:lightskyblue;}
+
+#section7{background-color:lightslategray;}
+
+#section8{background-color:lime;}
+
+
+.active{}

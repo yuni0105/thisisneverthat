@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="css/onepage.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <header>
+    <div id="logo">
+        <p>for the culture<br>
+            not for fashion</p>
+    </div>
+    </header>
+    <div id="menu">
+        <ul>
+            <li><a href="#section1"></a></li>
+            <li><a href="#section2"></a></li>
+            <li><a href="#section3"></a></li>
+            <li><a href="#section4"></a></li>
+            <li><a href="#section5"></a></li>
+            <li><a href="#section6"></a></li>
+            <li><a href="#section7"></a></li>
+            <li><a href="#section8"></a></li>
+        </ul>
+    </div>
+
+    <div id="contents">
+        <div id="section1">
+            <img src="img/maintest.png" alt="mainimage">
+        </div>
+
+        <div id="section2"></div>
+
+        <div id="section3"></div>
+
+        <div id="section4"></div>
+
+        <div id="section5"></div>
+
+        <div id="section6"></div>
+
+        <div id="section7"></div>
+
+        <div id="section8"></div>
+    </div>
+
+    <script>
+        // find section
+        var nav=$("#menu ul li");
+        var contents=$("#contents>div");
+
+        nav.click(function(){
+            var target = $(this);
+            var index = target.index();
+            var section = contents.eq(index);
+            var offset=section.offset().top;
+            $("html,body").animate({scrollTop:offset},400);
+        });
+
+        // li click active
+
+        // $(window).scroll(function(){
+        //     var wScroll = $(this).scrollTop();
+
+        //     if(wScroll>=contents.eq(0).offset().top){
+        //         nav.removeClass("active");
+        //         nav.eq(0).addClass("active");
+        //         $("#menu ul li a").eq(0).css('color','red');
+        //         $("#menu ul li a").not("#menu ul li a:eq(0)").css('color','white');
+        //     }
+
+            
+
+        // });
+    </script>
+</body>
+</html>
