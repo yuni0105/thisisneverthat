@@ -14,10 +14,16 @@
 <body>
     <header>
     <div id="logo">
+        <img src="img/logo3.png" alt="logo">
+    </div>
+    <div id="text">
         <p>for the culture<br>
             not for fashion</p>
     </div>
     </header>
+
+
+
     <div id="menu">
         <ul>
             <li><a href="#section1"></a></li>
@@ -33,12 +39,34 @@
 
     <div id="contents">
         <div id="section1">
-            <img src="img/maintest.png" alt="mainimage">
+            <a href="#section2" class="scroll"><span></span></a>
+            <img src="img/main.png" alt="mainimage">
         </div>
 
-        <div id="section2"></div>
+        <div id="section2">
+            <div class="half">
+                <p class="h">Lorem ipsum dolor</p>
+                <img src="img/page2_1.png" alt="backimage"> 
+            </div>
 
-        <div id="section3"></div>
+            <div class="half">
+                <div class="halfcut">
+                    <img src="img/3_1.png" alt="model" class="model1">
+                    <img src="img/3_2.png" alt="model" class="model2">
+                    <img src="img/3_3.png" alt="model" class="model3">
+                                  
+                </div>    
+            </div>
+        </div>
+            
+        <div id="section3">
+            <p>
+                SP-INTL.<br>
+                Sweater<br>
+                #1
+            </p>
+            <img src="img/section3.png" alt="sweater">
+        </div>
 
         <div id="section4"></div>
 
@@ -61,24 +89,49 @@
             var index = target.index();
             var section = contents.eq(index);
             var offset=section.offset().top;
-            $("html,body").animate({scrollTop:offset},400);
+            $("html,body").animate({scrollTop:offset},1400);
         });
 
-        // li click active
+        
+        $(window).scroll(function () {
 
-        // $(window).scroll(function(){
-        //     var wScroll = $(this).scrollTop();
+            var wScroll = $(this).scrollTop();
 
-        //     if(wScroll>=contents.eq(0).offset().top){
-        //         nav.removeClass("active");
-        //         nav.eq(0).addClass("active");
-        //         $("#menu ul li a").eq(0).css('color','red');
-        //         $("#menu ul li a").not("#menu ul li a:eq(0)").css('color','white');
-        //     }
+            for (i = 0; i < nav.length; i++) {
+                if (wScroll >= contents.eq(i).offset().top) {
+                    nav.removeClass("active");
+                    nav.eq(i).addClass("active");
+                }
+            };
+
+        });
+
+
+        // text 
+        $(document).ready(function(){
+            $("#text").css("transform", "translateX(0px)").css("opacity", "1");
+            $(window).scroll(function () {
+                var ws = $(this).scrollTop();
+                if (ws > 300) {
+                    $('.h').css("transform", "translateY(0px)").css("opacity", "1");
+                }
+            });
+        });
+
+        // scroll down
+
+            $(function () {
+                $('.scroll').on('click', function (e) {
+                    e.preventDefault();
+                    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000, 'linear');
+                });
+            });
+
+        // hamburger
+
 
             
-
-        // });
+         
     </script>
 </body>
 </html>
