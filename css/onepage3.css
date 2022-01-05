@@ -152,7 +152,7 @@ header {position: relative;}
         
                       
 
-#section2{ display: flex; justify-content: space-evenly; background-color: #fdfcfa;}
+#section2{ display: flex; justify-content: space-evenly;}
 .half {width:50%; height:100%; 
     display:flex;
     justify-content: center;
@@ -160,7 +160,8 @@ header {position: relative;}
      }
 
 .half img {width:100%; height:100%;}
-
+.back{
+    transform:translateY(100px); transition:all 2.5s; opacity: 0;}
 
 .halfcut{width:860px; height:380px; 
     position: absolute;
@@ -185,18 +186,14 @@ header {position: relative;}
     color:white;
     }             */
          
+#section3{background-color:lightgray;}
 
 
-/* #section3{background-color:lightgoldenrodyellow; 
+#section4{background-color:lightgoldenrodyellow; 
     display: flex; justify-content: center; 
     align-items: center;
-    position:relative;} */
-
-#section3{position: relative; background-color: #fdfcfa;}    
-.product_name{width:500px; height:700px;
-    position:absolute; z-index:9; left:10%;
-    }    
-.product_name p {font-family: "Helvetica Neue";
+    position:relative;}
+#section4 p {font-family: "Helvetica Neue";
     font-weight: bold;
     font-size: 80px;
     letter-spacing:-5px;
@@ -206,129 +203,8 @@ header {position: relative;}
     top:40%;
     left:3%;}
 
-/* hover */
-.container2{display: flex;
-    justify-content: center;
-    align-items: center;}
-.card {
-    width:400px;
-    height:900px;
-    position: relative;
-    background-color: aquamarine;}
-
-.card--image {
-    margin:0 auto;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.card--image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card--info {
-    --size: 20px;
-    width: var(--size);
-    height: var(--size);
-    background: rgba(0, 0, 0, 0.75);
-    border-radius: 2px;
-    position: absolute;
-    transition: width 550ms ease, height 550ms ease, right 550ms ease, background 550ms ease;
-    overflow: hidden;
-}
-
-.card--info::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-   z-index: 1;
-    opacity: 0;
-    transition: opacity 550ms ease;
-}
-
-.card--info.info--1 {
-    top:20%;
-    left: 35%;
-}
-
-.card--info.info--1 .info--image img {
-    top: -80%;
-    left: -20%;
-}
-
-.card--info.info--2 {
-    bottom: 25%;
-    right: 15%;
-}
-
-.card--info.info--2 .info--image img {
-    right: -20%;
-    bottom: -80%;
-}
-
-.card--info .icon {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.card--info .info--image {
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-}
-
-.card--info .info--image img {
-    position: absolute;
-    width: 340%;
-    height: 340%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 550ms ease;
-}
-
-.card:hover .card--info {
-    --size: 300px;
-}
-
-.card:hover .card--info::after {
-    opacity: 1;
-}
-
-.card:hover .card--info.info--1 {
-    right: -71%;
-    transition-delay: 100ms;
-}
-
-.card:hover .card--info.info--2 {
-    right: -10%;
-}
-
-.card:hover .card--info .info--image img {
-    opacity: 1;
-}
-
-
-
-
-#section4{background-color:lightgray;}
+.product{width:800px; height:800px; 
+    background-color: aqua;} 
 
 #section5{background-color:lightsalmon;}
 
