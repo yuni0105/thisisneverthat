@@ -1,22 +1,17 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>thisisneverthat</title>
 
-    <link href="css/onepage.css" rel="stylesheet">
-    <link href="css/style.scss" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'><link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
 
 </head>
 <body>
     <div id="top">
-        <div class="container">
+        <div class="container1">
                 <nav class="nav">
                                         
                         <ul class="navv">
@@ -50,181 +45,142 @@
                     </div>
                 </nav>
         </div>
+    </div>    
 
+
+
+<div class="container">
+    
+
+    <div id="section1">
+      <div class="main">
+        <h1 data-scroll data-scroll-speed="1"><span class="text">for the culture<br>not for fashion</span></h1>
+        <img src="img/main.png" alt="main">
+        <a href="#section2" class="scroll"><span></span></a>
+      </div>
+    </div>  
+
+
+    <div id="section3">
+      <div class="pin-wrap">
+        <div class="title2"><h3>"Everything Comes Full Circle"</h3></div>
+        <img src="img/page2_1.png" alt="model">
+        <img src="img/3_1.png" alt="model">
+        <img src="img/3_2.png" alt="model">
+        <img src="img/3_3.png" alt="model">
+
+
+      </div>
+    </div>
+    
+    <div class="boxwrap">
+        <section data-bgcolor="#e3857a" data-textcolor="#f1dba7"><img src="img/3_4.jpg" alt="model" class="sweater">
+        <h2 data-scroll data-scroll-speed="1" class="credit"></h2>
+        <!-- <div class="info">
+            SP-INTL . Sweater
+        </div> -->
+    </div>
+
+    <!-- <footer>  
+        <div class="containerf">
+            <div class="sns2">
+                <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="img/twitter.png" alt="twitter"></a>
+                <a href="#"><img src="img/insta.png" alt="instagram"></a>
+                <a href="#"><img src="img/youtube.png" alt="youtube"></a>
+                <a href="#"><img src="img/apple.png" alt="apple"></a>
+            </div>
+
+            <div class="info2">
+                <p>JKND CO., LTD.CEO NADAN CHO10-2, YEONHUI-RO 11RA-GIL, SEODAEMUN-GU, SEOUL, 
+                    REPUBLIC OF KOREA 03703BUSINESS LICENSE: 361-86-01005ONLINE BUSINESS LICENSE: 2018-SEOUL MAPO-0418+82 (0)70 4048 5375-6</p>
+            </div>    
+        </div>
+    </footer> -->
+
+    
+    
 </div>
 
+  <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js'></script><script  src="./script.js"></script>
 
 
-    <header>
-    <div id="logo">
-        <img src="img/logo3.png" alt="logo">
-    </div>
-    <div id="text">
-        <p>for the culture<br>
-            not for fashion</p>
-    </div>
-    </header>
+      <script>
+            gsap.registerPlugin(ScrollTrigger);
+
+            const pageContainer = document.querySelector(".container");
+
+            /* smooth scroll */
+            const scroller = new LocomotiveScroll({
+                el: pageContainer,
+                smooth: true
+            });
+
+            scroller.on("scroll", ScrollTrigger.update);
+
+            ScrollTrigger.scrollerProxy(pageContainer, {
+                scrollTop(value) {
+                    return arguments.length
+                        ? scroller.scrollTo(value, 0, 0)
+                        : scroller.scroll.instance.scroll.y;
+                },
+                getBoundingClientRect() {
+                    return {
+                        left: 0,
+                        top: 0,
+                        width: window.innerWidth,
+                        height: window.innerHeight
+                    };
+                },
+                pinType: pageContainer.style.transform ? "transform" : "fixed"
+            });
 
 
-
-    <div id="menu">
-        <ul>
-            <li><a href="#section1"></a></li>
-            <li><a href="#section2"></a></li>
-            <li><a href="#section3"></a></li>
-            <li><a href="#section4"></a></li>
-            <li><a href="#section5"></a></li>
-            <li><a href="#section6"></a></li>
-            <li><a href="#section7"></a></li>
-            <li><a href="#section8"></a></li>
-        </ul>
-    </div>
-
-    <div id="contents">
-        <div id="section1">
-            <a href="#section2" class="scroll"><span></span></a>
-            <img src="img/main.png" alt="mainimage">
-        </div>
-
-
-        <div id="section3">
-            <div class="product_name">
-                <p>
-                    PERTEX<br>
-                    T Down<br>
-                    Jacket
-                </p>
-            </div>
-
-            <div class="container2">
-                <div class="card">
-                    <div class="card--image">
-                        <img src="img/hover.png" alt="modelhover">
-                    </div>
-
-                    <div class="card--info info--1">
-                        <div class="icon">
-                            <ion-icon name="add-outline"></ion-icon>
-                        </div>
-                        <div class="info--image">
-                            <img src="img/hover1.jpg" alt="detail">
-                        </div>
-                    </div>
-                    <!-- <div class="card--info info--2">
-                        <span class="info--text"></span>
-                        <div class="icon">
-                            <ion-icon name="add-outline"></ion-icon>
-                        </div>
-                        <div class="info--image">
-                            <img src="img/hover2.jpg" alt="detail2">
-                        </div>
-                    </div> -->
-                </div>
-                
-            </div>
-            
-        </div>
-
-        <div id="section2">
-            <div class="half">
-                <!-- <p class="h">winter 2020 editorial</p> -->
-                <img src="img/page2_1.png" alt="backimage" class="back"> 
-            </div>
-
-            <div class="half">
-                <div class="halfcut">
-                    <img src="img/3_1.png" alt="model" class="model1">
-                    <img src="img/3_2.png" alt="model" class="model2">
-                    <img src="img/3_3.png" alt="model" class="model3">
-
-                    
-                                  
-                </div>    
-            </div>
-        </div>
-
-        <div id="section4">
-
-        </div>
-
-        <div id="section5"></div>
-
-        <div id="section6"></div>
-
-        <div id="section7"></div>
-
-        <div id="section8">
-
-        </div>
-    </div>
-
-    <script>
-        // find section
-        var nav=$("#menu ul li");
-        var contents=$("#contents>div");
-
-        nav.click(function(){
-            var target = $(this);
-            var index = target.index();
-            var section = contents.eq(index);
-            var offset=section.offset().top;
-            $("html,body").animate({scrollTop:offset},1400);
-        });
+            window.addEventListener("load", function () {
+                let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+                let pinWrap = document.querySelector(".pin-wrap");
+                let pinWrapWidth = pinWrap.offsetWidth;
+                let horizontalScrollLength = pinWrapWidth - window.innerWidth;
 
         
-        $(window).scroll(function () {
 
-            var wScroll = $(this).scrollTop();
-
-            for (i = 0; i < nav.length; i++) {
-                if (wScroll >= contents.eq(i).offset().top) {
-                    nav.removeClass("active");
-                    nav.eq(i).addClass("active");
-                }
-            };
-
-        });
-
-
-        // text 
-        $(document).ready(function(){
-            $("#text").css("transform", "translateX(0px)").css("opacity", "1");
-            $(window).scroll(function () {
-                var ws = $(this).scrollTop();
-                // if (ws > 300) {
-                //     $('.back').css("transform", "translatex(0px)").css("opacity", "1");
-                // }
-            });
-        });
-
-        // scroll down
-
-            $(function () {
-                $('.scroll').on('click', function (e) {
-                    e.preventDefault();
-                    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000, 'linear');
+                gsap.to(".pin-wrap", {
+                    scrollTrigger: {
+                        scroller: pageContainer, 
+                        scrub: true,
+                        trigger: "#section3",
+                        pin: true,
+  
+                        start: "top top",
+                        end: pinWrapWidth
+                    },
+                    x: -horizontalScrollLength,
+                    ease: "none"
                 });
+
+                ScrollTrigger.addEventListener("refresh", () => scroller.update()); 
+
+                ScrollTrigger.refresh();
             });
 
-        // hamburger
+                // hamburger
 
-        $(function () {
-        $('.fas').click(function () {
-            $(".nav").toggleClass("wow");
-            if ($(".nav").hasClass("wow")) {
-                $(".nav").animate({ "left": "0px" }, 500);
+                $(function () {
+                    $('.fas').click(function () {
+                        $(".nav").toggleClass("wow");
+                        if ($(".nav").hasClass("wow")) {
+                            $(".nav").animate({ "left": "1000px" }, 500);
 
-            } else {
-                $(".nav").animate({ "left": "-400px" }, 500);
+                        } else {
+                            $(".nav").animate({ "left": "-400px" }, 500);
 
-            }
-        });
-    });
+                        }
+                    });
+                });
 
 
-
-            
-         
-    </script>
+      </script>
 </body>
 </html>
