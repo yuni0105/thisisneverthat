@@ -8,12 +8,16 @@
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'><link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Metal&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div id="top">
+    <div id="menu">
         <div class="container1">
-                <nav class="nav">
-                                        
+                <nav class="nav">               
                         <ul class="navv">
                             <li><a href="#">SHOP</a></li>
                             <li><a href="#">TOP20</a></li>
@@ -22,7 +26,7 @@
                         </ul>
                         
                         
-                        <i class="fas fa-bars" ></i>
+                        <img src="img/menu.png" class="ham">
 
                         <ul class="navv2">
                             <li><a href="#">CONTACT</a></li>
@@ -74,29 +78,85 @@
     </div>
     
     <div class="boxwrap">
-        <section data-bgcolor="#e3857a" data-textcolor="#f1dba7"><img src="img/3_4.jpg" alt="model" class="sweater">
+
+        <div class="first">
+            <span><h4>SP-INTL.<br> Sweater</h4></span>
+        </div>
+
+        <section data-bgcolor="#e3857a" data-textcolor="#f1dba7">
+            <img src="img/3_4.jpg" alt="model" class="sweater">
+        </section>    
         <h2 data-scroll data-scroll-speed="1" class="credit"></h2>
         <!-- <div class="info">
             SP-INTL . Sweater
         </div> -->
     </div>
 
-    <!-- <footer>  
+    <div id="section4">
+
+    </div>
+
+    <footer>  
         <div class="containerf">
+            <div class="contact">
+                <div class="contactus">
+                    <h4>CUSTOMER SERVICE</h4><br>
+
+                    <span>For general questions or product inquiry,<br>
+                        please contact us through the form below.<br>
+                        To view, cancel, and/or track orders<br><br>
+                        
+    
+                        Korean: +82 (0)70 4048 5375<br> 
+                        English: +82 (0)70-4048-3213<br>
+                        Or send us an email: qwerty@thisisneverthat.com<br><br> 
+    
+                        Monday to Friday 10am—6pm</span>
+                    
+                </div>
+                <div class="line">
+
+                </div>
+                <form>
+                    <div class="titlec">
+                        <h4>CONTACT US</h4>
+                    </div>
+
+                    <label>
+                        <input type="text" placeholder="Name">
+                    </label>
+                    <label>
+                        <input type="text" placeholder="Email Address">
+                    </label>
+                    <label>
+                        <input type="text" placeholder="Phone Number">
+                    </label>
+                    <label>
+                        <input type="text" placeholder="Order Number">
+                    </label>
+                    <label class="message">
+                        <input type="text" placeholder="Message" id="message">
+                    </label>
+                    <button class="red" type="button">SUBMIT</button>
+                </form>
+            </div>
+
             <div class="sns2">
-                <a href="#"><img src="img/facebook.png" alt="facebook"></a>
-                <a href="#"><img src="img/twitter.png" alt="twitter"></a>
-                <a href="#"><img src="img/insta.png" alt="instagram"></a>
-                <a href="#"><img src="img/youtube.png" alt="youtube"></a>
-                <a href="#"><img src="img/apple.png" alt="apple"></a>
+                <a href="#"><img src="img/facebook2.png" alt="facebook"></a>
+                <a href="#"><img src="img/twitter2.png" alt="twitter"></a>
+                <a href="#"><img src="img/insta2.png" alt="instagram"></a>
+                <a href="#"><img src="img/youtube2.png" alt="youtube"></a>
+                <a href="#"><img src="img/apple2.png" alt="apple"></a>
             </div>
 
             <div class="info2">
-                <p>JKND CO., LTD.CEO NADAN CHO10-2, YEONHUI-RO 11RA-GIL, SEODAEMUN-GU, SEOUL, 
-                    REPUBLIC OF KOREA 03703BUSINESS LICENSE: 361-86-01005ONLINE BUSINESS LICENSE: 2018-SEOUL MAPO-0418+82 (0)70 4048 5375-6</p>
+                <span><br><br><br>JKND CO., LTD.CEO NADAN CHO10-2,
+                    YEONHUI-RO 11RA-GIL, SEODAEMUN-GU, SEOUL, REPUBLIC OF KOREA 03703<br>
+                    BUSINESS LICENSE: 361-86-01005ONLINE BUSINESS LICENSE: 2018-SEOUL MAPO-0418<br>
+                    +82 (0)70 4048 5375-6</span>
             </div>    
         </div>
-    </footer> -->
+    </footer>
 
     
     
@@ -161,24 +221,20 @@
                 });
 
                 ScrollTrigger.addEventListener("refresh", () => scroller.update()); 
-
                 ScrollTrigger.refresh();
             });
 
-                // hamburger
-
-                $(function () {
-                    $('.fas').click(function () {
-                        $(".nav").toggleClass("wow");
-                        if ($(".nav").hasClass("wow")) {
-                            $(".nav").animate({ "left": "1000px" }, 500);
-
-                        } else {
-                            $(".nav").animate({ "left": "-400px" }, 500);
-
-                        }
-                    });
-                });
+                // // hamburger menu
+                //     $(function () {
+                //         $(".ham").click(function () {
+                //             $(".nav").toggleClass("wow");
+                //             if ($(".nav").hasClass("wow")) {
+                //                 $(".nav").animate({ "left": "0px" }, 500);
+                //             } else {
+                //                 $(".nav").animate({ "left": "-400px" }, 500);
+                //             }
+                //         });
+                //     });
 
 
       </script>
