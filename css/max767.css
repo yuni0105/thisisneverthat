@@ -143,7 +143,7 @@ html{height:100%;}
 
 
 /* main */
-.main {position: relative; width:100%; display: flex; justify-content: center;}
+.main {position: relative; width:100vw; display: flex; justify-content: center;}
 .text{font-family: "Helvetica Neue";
   font-weight: bold;
   font-size: 40px;
@@ -151,10 +151,9 @@ html{height:100%;}
   text-align: center;
   line-height:40px;
   z-index: 200;
-  width:300px; height:100px;
+  width:130vw; height:100px;
   position:absolute;
   top:80px;
-  left:0px;
   }
   
   section:not(#sectionPin) {
@@ -164,13 +163,13 @@ html{height:100%;}
     z-index: 2;
 
   }
-  .mainmodel{width:100vw; }
+  .mainmodel{width:100vh; margin-left:-20%;}
   
-  img {
+  /* img {
     height: 600px;
     width: 680px;
-    object-fit: cover;
-  }
+    /* object-fit: cover; */
+  } */
   
   h1 {
     font-size: 5rem;
