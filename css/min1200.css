@@ -102,7 +102,7 @@ html{height:100%;}
 #section0 {position:relative; width:100%; background-color: gold;}
   /* background: linear-gradient(black ,gray,lightgray,lightgray, #fdfcfa); height:100vh;} */
 
-.empty{width:100%; height: 700px; background-color: #fdfcfa;}  
+.empty{width:100%; height: 800px; background-color: #fdfcfa;}  
 .grad{width:100%; height: 300px;background-color: #fdfcfa;;}
 .tnt {
   color: black;
@@ -110,7 +110,7 @@ html{height:100%;}
   font-size: 70px;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 60%;
   transform: translate(-50%, -50%);
 }
 
@@ -146,14 +146,15 @@ html{height:100%;}
 .main {position: relative;}
 .text{font-family: "Helvetica Neue";
   font-weight: bold;
-  font-size: 60px;
+  font-size: 50px;
   letter-spacing:-5px;
   text-align: center;
-  line-height:80px;
+  line-height:50px;
   z-index: 200;
   width:700px; height:500px;
   position:absolute;
   top:100px;
+
   }
   
   section:not(#sectionPin) {
@@ -161,8 +162,8 @@ html{height:100%;}
     width: 100%;
     position: relative;
     z-index: 2;
-
   }
+  .mainmodel{width:100%;}
   
   img {
     height: 100vh;
@@ -346,7 +347,7 @@ html{height:100%;}
   }
 }
   
-section{width:50%; height:100vh; }
+section{width:50%; height:100vh; display: flex; justify-content: space-evenly;}
 
 .boxwrap {position: relative; display: flex;
   justify-content: center;}
@@ -399,7 +400,7 @@ section{width:50%; height:100vh; }
   transition:all 0.5s ease;
   filter: grayscale(100%);
 }
-.gallery-item .image img:hover {opacity: 0.5; cursor: pointer;filter: grayscale(0%);}
+.gallery-item .image img:hover { cursor: pointer;filter: grayscale(0%);}
 
 .w-1{
   grid-column: span 1;
@@ -501,6 +502,7 @@ form{padding:100px; width:500px; height:700px; margin:0 auto;
 
 .titlec{padding:32px 0; text-align: center;}
 
+.viewmore{width:20%;}
 button, input{
     border:0;
     outline:0;
